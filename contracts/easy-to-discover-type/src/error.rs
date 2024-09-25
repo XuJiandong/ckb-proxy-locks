@@ -1,4 +1,5 @@
 use ckb_std::error::SysError;
+use ckb_std::error::SysError::{InvalidFd, MaxFdsCreated, MaxVmsSpawned, OtherEndClosed, WaitFailure};
 
 /// Error
 #[repr(i8)]
@@ -21,6 +22,7 @@ impl From<SysError> for Error {
             LengthNotEnough(_) => Self::LengthNotEnough,
             Encoding => Self::Encoding,
             Unknown(err_code) => panic!("unexpected sys error {}", err_code),
+            _ =>  Self::Encoding
         }
     }
 }

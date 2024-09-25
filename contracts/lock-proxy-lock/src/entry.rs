@@ -1,9 +1,5 @@
 use alloc::vec::Vec;
-use ckb_std::{
-    ckb_constants::Source,
-    ckb_types::prelude::Unpack,
-    high_level::{load_cell_lock_hash, load_script, QueryIter},
-};
+use ckb_std::{ckb_constants::Source, ckb_types::prelude::Unpack, debug, high_level::{load_cell_lock_hash, load_script, QueryIter}};
 
 use crate::error::Error;
 
