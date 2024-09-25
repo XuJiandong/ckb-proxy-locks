@@ -49,7 +49,7 @@ pub mod prelude {
 // The exact same Loader code from capsule's template, except that
 // now we use MODE as the environment variable
 const TEST_ENV_VAR: &str = "MODE";
-const DEFAULT_TYPE: ScriptHashType = ScriptHashType::Type;
+const DEFAULT_TYPE: ScriptHashType = ScriptHashType::Data2;
 
 pub enum TestEnv {
     Debug,
